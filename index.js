@@ -5,6 +5,11 @@ function add(arg1,arg2){
     return sum;
 }
 
-const result = add(2,2);
+function subtraction(arg1,arg2){
+    const answer = arg1-arg2;
+    return answer;
+}
+
+const result = subtraction(2,4);
 
 console.log(result);
