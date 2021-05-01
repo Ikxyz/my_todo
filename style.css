@@ -9,7 +9,7 @@ body {
   height: 100vh;
   gap: 5px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
   box-shadow: 2px 1px #333;
 }
 
@@ -24,8 +24,8 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   transition: linear 2px ease-in-out;
-  grid-column: 3/3;
-  grid-row:2/3;
+  grid-column: 2/3;
+  grid-row:3/3;
 }
 
 .todo-item-box {
