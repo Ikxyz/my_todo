@@ -36,7 +36,14 @@ body{
   box-shadow: 0px 0px 5px 0px gray;
 }
 
+button {
+  background-color: rgba(148,187,233,1) !important;
+  border: none !important;
+}
 
+h1{
+  color: rgba(148,187,233,1) !important;
+}
 
 .card{
   padding: 40px;
