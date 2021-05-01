@@ -19,7 +19,7 @@ body {
 }
 
 .todo-box{
-  padding: 100px 0px;
+  padding: 20px 0px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(10px);
