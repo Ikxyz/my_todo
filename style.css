@@ -69,3 +69,10 @@ button{
   padding: 5px 10px;
   width: fit-content;
 }
+/* 
+@media max-width(550px) {
+  .box-container {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 6fr 1fr;
+  }
+} */
