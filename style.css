@@ -10,7 +10,6 @@ body {
   gap: 5px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 4fr 1fr;
-  box-shadow: 2px 1px #333;
 }
 
 .header {
@@ -26,6 +25,7 @@ body {
   transition: linear 2px ease-in-out;
   grid-column: 2/3;
   grid-row:3/3;
+  box-shadow: 2px 1px rgba(51, 51, 51, 0.466);
 }
 
 .todo-item-box {
