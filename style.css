@@ -9,7 +9,7 @@ body {
   height: 100vh;
   gap: 5px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
   box-shadow: 2px 1px #333;
 }
 
@@ -19,11 +19,12 @@ body {
 }
 
 .todo-box{
+  padding: 100px 0px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(10px);
   transition: linear 2px ease-in-out;
-  grid-column: 2/3;
+  grid-column: 3/3;
   grid-row:2/3;
 }
 
@@ -58,8 +59,10 @@ body {
   padding: 10px 10px;
 }
 
-.text:hover {
-  background-color: #fe7;
+.text:focus{
+  background: none;
+  border: none;
+  border-bottom: 2px solid #333;
 }
 
 button{
