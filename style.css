@@ -17,7 +17,6 @@ body {
   grid-row: 2/3;
   color: #fff;
   box-shadow: 0 0 10px #0D1117;
-  margin-top: 4px;
 }
 .todo-form {
   width: 94%;
