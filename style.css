@@ -4,11 +4,24 @@
   gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
+  background-color: rgba(190, 100, 145, 0.479);
+  
 }
 
+
+.done {
+  color: #908e92;
+}
+
+.text-background{
+  color:blueviolet;
+}
 .todo-container{
 grid-column: 2/3;
 grid-row:2/3;
+background-color: bisque;
+
+
 }
 
 .todo-item{
@@ -23,16 +36,26 @@ grid-row:2/3;
 }
 
 .todo-item:hover{
-    color: blue;
+    color: blueviolet;
     margin-left: 10px;
     margin-right: 0px;
     box-shadow: 0px 0px 5px 0px gray;
+    background-color: white;
 }
 
 button{
     width: fit-content;
+    background-color: rgb(20, 19, 20);
+   
 }
-
+#new_btn:hover{
+  color: white;
+  background-color: blueviolet; 
+}
+#new_btn {
+  color:blueviolet;
+  background-color: white; 
+}
 /* 
 .sectionOne {
   background-color: red;
