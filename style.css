@@ -1,87 +1,59 @@
-.grid-container {
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(238,174,202) !important;
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%) !important;
+}
+
+
+
+.grid-container{
   display: grid;
-  height: 100vh;
-  gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  height: 100vh;
   grid-template-rows: 1fr 4fr 1fr;
 }
 
 .todo-container{
-grid-column: 2/3;
-grid-row:2/3;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .todo-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 300ms 0s ease;
-    padding: 5px 20px;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
+  transition: all 300ms 0s ease;
+  padding: 7px 20px 2px 20px;
 }
 
 .todo-item:hover{
-    color: blue;
-    margin-left: 10px;
-    margin-right: 0px;
-    box-shadow: 0px 0px 5px 0px gray;
+  color: blue;
+  margin-left: 10px;
+  margin-right: 0px;
+  box-shadow: 0px 0px 5px 0px gray;
 }
 
-button{
-    width: fit-content;
+
+
+.card{
+  padding: 40px;
 }
 
-/* 
-.sectionOne {
-  background-color: red;
-}
 
-.sectionTwo {
-  background-color: blue;
-}
+@media only screen and (max-width:550px) {
+  .grid-container{
+      grid-template-columns: 1fr;
+      grid-template-rows:  1fr;
+  }
 
-.sectionThree {
-  background-color: green;
-}
+  .todo-container{
+      grid-column-start: 2;
+      grid-column-end: 1;
 
-.sectionFour {
-  background-color: purple;
-}
-
-.sectionFive {
-  background-color: orange;
-  text-align: center;
-}
-
-.sectionSix {
-  background-color: pink;
-}
-
-.sectionSeven {
-  background-color: brown;
-}
-
-.sectionEight {
-  background-color: teal;
-}
-
-.sectionNine {
-  background-color: tomato;
-}
- */
-
-@media only screen and (max-width:550px){
-
-    .grid-container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 6fr 1fr;
-    }
-
-    .todo-container{
-        grid-column:1/2;
-        grid-row: 2/3;
-    }
-
+      grid-row-start: 1;
+      grid-row-end: 2;
+  }
 }
