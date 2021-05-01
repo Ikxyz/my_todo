@@ -4,7 +4,10 @@
   gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
+  background-color: rgb(102, 115, 250);
 }
+
+
 
 .todo-container{
 grid-column: 2/3;
@@ -20,10 +23,11 @@ grid-row:2/3;
     border: none;
     cursor: pointer;
     margin-right: 10px;
+    background-color: rgb(12, 206, 115);
 }
 
 .todo-item:hover{
-    color: blue;
+    color: rgb(240, 243, 239);
     margin-left: 10px;
     margin-right: 0px;
     box-shadow: 0px 0px 5px 0px gray;
@@ -32,7 +36,9 @@ grid-row:2/3;
 button{
     width: fit-content;
 }
-
+.button:hover{
+  color:burlywood
+}
 /* 
 .sectionOne {
   background-color: red;
@@ -83,5 +89,6 @@ button{
         grid-column:1/2;
         grid-row: 2/3;
     }
+ 
 
 }
