@@ -19,8 +19,8 @@ button:hover{
 }
 
 .todo-container{
-grid-column: 2/3;
-grid-row:2/3;
+grid-column: 3/3;
+grid-row:3/3;
 }
 
 .todo-item{
