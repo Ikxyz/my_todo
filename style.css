@@ -1,3 +1,8 @@
+body {
+  background: url(./image/lauren-sauder-6GPBVYLapYQ-unsplash.jpg) no-repeat top
+    center;
+    background-size: cover;
+}
 .grid-container {
   display: grid;
   height: 100vh;
@@ -6,82 +11,94 @@
   grid-template-rows: 1fr 4fr 1fr;
 }
 
-.todo-container{
-grid-column: 2/3;
-grid-row:2/3;
+.todo-container {
+    background: #0d1117e0;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: #fff;
+  box-shadow: 0 0 10px #0D1117;
+  margin-top: 4px;
+}
+.todo-form {
+  width: 94%;
+  margin: 0 auto;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.input-group-text{
+    border-color: #0d6efd;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 300ms 0s ease;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.todo-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 300ms 0s ease;
-    padding: 5px 20px;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
+.todo-item:hover {
+  color: blue;
+  margin-left: 10px;
+  margin-right: 0px;
+  box-shadow: 0px 0px 5px 0px gray;
 }
 
-.todo-item:hover{
-    color: blue;
-    margin-left: 10px;
-    margin-right: 0px;
-    box-shadow: 0px 0px 5px 0px gray;
-}
-
-button{
-    width: fit-content;
+button {
+  width: fit-content;
 }
 
 /* 
-.sectionOne {
-  background-color: red;
-}
+  .sectionOne {
+    background-color: red;
+  }
+  
+  .sectionTwo {
+    background-color: blue;
+  }
+  
+  .sectionThree {
+    background-color: green;
+  }
+  
+  .sectionFour {
+    background-color: purple;
+  }
+  
+  .sectionFive {
+    background-color: orange;
+    text-align: center;
+  }
+  
+  .sectionSix {
+    background-color: pink;
+  }
+  
+  .sectionSeven {
+    background-color: brown;
+  }
+  
+  .sectionEight {
+    background-color: teal;
+  }
+  
+  .sectionNine {
+    background-color: tomato;
+  }
+   */
 
-.sectionTwo {
-  background-color: blue;
-}
+@media only screen and (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+  }
 
-.sectionThree {
-  background-color: green;
-}
-
-.sectionFour {
-  background-color: purple;
-}
-
-.sectionFive {
-  background-color: orange;
-  text-align: center;
-}
-
-.sectionSix {
-  background-color: pink;
-}
-
-.sectionSeven {
-  background-color: brown;
-}
-
-.sectionEight {
-  background-color: teal;
-}
-
-.sectionNine {
-  background-color: tomato;
-}
- */
-
-@media only screen and (max-width:550px){
-
-    .grid-container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 6fr 1fr;
-    }
-
-    .todo-container{
-        grid-column:1/2;
-        grid-row: 2/3;
-    }
-
+  .todo-container {
+    grid-column: 1/2;
+    grid-row: 0/1;
+  }
 }
