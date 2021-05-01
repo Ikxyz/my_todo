@@ -1,9 +1,21 @@
+button{
+  background-color: #e3bc9a;
+  border: none;
+  border-radius: 5px !important;
+  margin: 5px !important;
+}
+button:hover{
+  background-color: white;
+  color: #e3bc9a;
+}
+
 .grid-container {
   display: grid;
   height: 100vh;
   gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
+  background-color: #e3bc9a38;
 }
 
 .todo-container{
@@ -23,7 +35,7 @@ grid-row:2/3;
 }
 
 .todo-item:hover{
-    color: blue;
+    color: #e3bc9a;
     margin-left: 10px;
     margin-right: 0px;
     box-shadow: 0px 0px 5px 0px gray;
