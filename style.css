@@ -13,7 +13,7 @@ body {
 
 .todo-container {
     background: #0d1117e0;
-  grid-column: 2/3;
+  grid-column: 3/4;
   grid-row: 2/3;
   color: #fff;
   box-shadow: 0 0 10px #0D1117;
