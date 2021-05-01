@@ -17,16 +17,21 @@ body{
 }
 
 .todo-container{
-
-  grid-column-start: 1;
-  grid-column-end: 2;
+  background: rgba( 255, 255, 255, 0.60 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-end: 3;
 }
 
 .todo-item{
   transition: all 300ms 0s ease;
-  padding: 7px 20px 2px 20px;
+  padding: 7px 25px 2px 25px;
 }
 
 .todo-item:hover{
@@ -37,8 +42,15 @@ body{
 }
 
 button {
+  width: 90px;
+  height: 40px;
   background-color: rgba(148,187,233,1) !important;
   border: none !important;
+}
+
+.form-control{
+  width: 92% !important;
+
 }
 
 h1{
