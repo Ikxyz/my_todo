@@ -15,13 +15,11 @@
             <div class="header">
                 <h1>Todo Application </h1>
                 <p>list of all my todos</p>
-                <form>
-                    <input type="text" class="text" required>
-                    <button type="submit">Add</button>
-                </form>
+                    <input type="text" class="text" id="userInput" value="">
+                    <button onclick="addItem()">Add</button>
             </div>
 
-            <div class="todo-item-box"> 
+            <div class="todo-item-box" id="todoItems"> 
                 <div class="todo-item">
                     <span>
                         Break up with Anna
