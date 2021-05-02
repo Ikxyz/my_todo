@@ -48,7 +48,7 @@ body {
 }
 
 .todo-item:hover{
-  color: #fe7;
+  
   margin-left: 10px;
   margin-right: 0;
   box-shadow: 0px 0px 5px 0px gray;
@@ -70,6 +70,22 @@ button{
   padding: 5px 10px;
   width: fit-content;
 }
+
+i {
+  background: #00f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+i:hover {
+  background: #fff;
+  color: #00f;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+
 /* 
 @media max-width(550px) {
   .box-container {
