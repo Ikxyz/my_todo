@@ -17,6 +17,10 @@ body {
   color: #333;
 }
 
+.header h1 {
+  color: #fff;
+}
+
 .todo-box{
   margin-bottom: 20px;
   padding: 20px 0px;
@@ -48,7 +52,6 @@ body {
 }
 
 .todo-item:hover{
-  
   margin-left: 10px;
   margin-right: 0;
   box-shadow: 0px 0px 5px 0px gray;
@@ -60,10 +63,10 @@ body {
   padding: 10px 10px;
 }
 
-.text:focus{
-  background: rgba(255, 255, 255, 0.1);
+.text:focus, .text:hover {
+  background: rgba(255, 255, 255, 0.2);
   border: none;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 button{
