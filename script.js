@@ -1,6 +1,13 @@
-let x = 1;
-let y = ++x
+var name = prompt('Please enter your name','Poppy');
+        if (name != null && name != "") {
+            alert(name);
+        }
 
+// window.alert("Enter your name")
+
+function writeName() {
+    
+}
 
 // Add an Item
 
