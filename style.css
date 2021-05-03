@@ -1,9 +1,10 @@
 body {
   font-family: sans-serif;
- /* background: url(chill.jpg) no-repeat;
-  background-size: cover; */
-  background:#fbdfb4;
-  font-family: poppins , sans-serif;
+  background: url(chill.jpg) no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  min-height: 130vh;
+  font-family: poppins , sans-serif !important;
   
 }
 
@@ -19,6 +20,15 @@ body {
   text-align: center;
   color: #333;
 }
+.header h1{
+  margin-bottom:0;
+  font-size: 34px;
+  margin-top:10px;
+}
+.header p{
+  margin-top:0px;
+  margin-bottom:40px;
+}
 
 .todo-box{
   padding-top: 20px;
@@ -27,11 +37,11 @@ body {
   backdrop-filter: blur(10px);
   transition: linear 2px ease-in-out; */
   grid-column: 2/3;
-  grid-row:3/3;
+  grid-row:1/2;
   background:#fff;
   border-radius:35px;;
   width:400px;
-  margin-bottom:400px;
+  margin-top:10px;
   box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.014);
  /* box-shadow: 2px 1px rgba(51, 51, 51, 0.466); */
 }
@@ -45,7 +55,7 @@ body {
 }
 
 .todo-item{
-  background: rgb(173, 216, 230);
+
   color: #333;
   display: flex;
   justify-content: space-between;
@@ -56,33 +66,46 @@ body {
   cursor: pointer;
   margin-right: 10px;
   margin-left:10px;
-  margin-top:20px;
+  margin-top:10px;
   font-weight: 500;
-  border-bottom:2px solid #f7f7f7;
+  border-bottom:1px solid #c2b6b6;
 }
 
 .todo-item:hover{
-  color: #fe7;
-  margin-left: 10px;
-  margin-right: 0;
-  box-shadow: 0px 0px 5px 0px gray;
+  color: #fff;
+ /* margin-left: 10px;
+  
+  margin-right: 0; */
+  transform: translateX(10px);
+ /* box-shadow: 0px 0px 5px 0px rgb(255, 255, 255); */
 }
 
 .text {
   border: none;
   border-radius: 10px;
   padding: 10px 10px;
+  border:1px solid gray;
+  outline:none;
+  width:270px;
+  margin-bottom:20px;
 }
 
-.text:focus{
+/*.text:focus{
   background: none;
   border: none;
   border-bottom: 2px solid #333;
-}
+}*/
 
 button{
-  padding: 5px 10px;
+  padding: 11px 20px;
   width: fit-content;
+  background:#2471ff;
+  outline:none;
+  border:none;
+  border-radius: 8px;
+  color:#fff;
+  font-size: 15px;
+  
 }
 /* 
 @media max-width(550px) {
