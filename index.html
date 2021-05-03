@@ -20,82 +20,21 @@
 
             <h1 class="text-primary">Todo Application </h1>
             <p class="text-muted">list of all my todos</p>
-            <input class="form-control" type="text" />
-            <button class="btn btn-primary mt-1 mb-3">Add</button>
-            <!-- TODO ITEM 1 -->
-            <div class="todo-item">
-                <span>
-                    Read a book
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
+            <!--START INPUT FIELD -->
+            <input id="input-todo" class="form-control" type="text" />
+            <!-- END INPUT  FIELD-->
+            <button onclick="onClickAddTodoButton()" class="btn btn-primary mt-1 mb-3">Add</button>
+           
+           
+           <div id="list-of-todos">
 
-            <!-- TODO ITEM 2 -->
-            <div class="todo-item">
-                <span>
-                    Call Mum
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 3 -->
-            <div class="todo-item">
-                <span>
-                    Other Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 4 -->
-            <div class="todo-item text-danger">
-                <del> <span>
-                        Very Important Todo
-                    </span></del>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 5 -->
-            <div class="todo-item">
-                <span>
-                    Completed Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
+           </div>
 
 
         </div>
-        <!-- <div class="sectionOne">
-            Section One
-        </div>
-        <div class="sectionTwo">
-            Section Two
-        </div>
-        <div class="sectionThree">
-            Section Three
-        </div>
-
-        <div class="sectionFour">
-            Section Four
-        </div>
-<div class="sectionFive">
-    Section Five
-</div>
-<div class="sectionSix">
-    Section Six
 </div>
 
-<div class="sectionSeven">
-    Section Seven
-</div>
-
-<div class="sectionEight">
-    Section Eight
-</div>
-
-<div class="sectionNine">
-    Section Nine
-</div> -->
-</div>
+<script src="./main.js" />
 </body>
 
 

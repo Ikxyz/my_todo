@@ -28,49 +28,13 @@ grid-row:2/3;
     margin-right: 0px;
     box-shadow: 0px 0px 5px 0px gray;
 }
-
+.completed{
+  color: green;
+  text-decoration: line-through;
+}
 button{
     width: fit-content;
 }
-
-/* 
-.sectionOne {
-  background-color: red;
-}
-
-.sectionTwo {
-  background-color: blue;
-}
-
-.sectionThree {
-  background-color: green;
-}
-
-.sectionFour {
-  background-color: purple;
-}
-
-.sectionFive {
-  background-color: orange;
-  text-align: center;
-}
-
-.sectionSix {
-  background-color: pink;
-}
-
-.sectionSeven {
-  background-color: brown;
-}
-
-.sectionEight {
-  background-color: teal;
-}
-
-.sectionNine {
-  background-color: tomato;
-}
- */
 
 @media only screen and (max-width:550px){
 
