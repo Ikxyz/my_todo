@@ -1,12 +1,10 @@
-var name = prompt('Please enter your name','Poppy');
-        if (name != null && name != "") {
-            alert(name);
-        }
-
 // window.alert("Enter your name")
 
 function writeName() {
-    
+    let userName = prompt('Please enter your name','Poppy');
+        if (userName != null && userName != "") {
+            document.getElementById("welcome").innerHTML = "Hello "+ userName
+        }
 }
 
 // Add an Item
