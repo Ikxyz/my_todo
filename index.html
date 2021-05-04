@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/58d2f8cb9d.js" crossorigin="anonymous"></script>
+
 </head>
 <body onload="writeName()">
     
@@ -25,7 +26,14 @@
             <div class="todo-item-box" id="todoItems"> 
                 <div class="todo-item">
                     <span>
-                        Break up with Anna
+                        Listen to Country music for 30mins
+                    </span>
+                    <i class="fas fa-minus" id="remove" onclick="removeItem()"></i>
+                </div>
+
+                <div class="todo-item">
+                    <span>
+                        Push a random person off a cliff
                     </span>
                     <i class="fas fa-minus" id="remove" onclick="removeItem()"></i>
                 </div>
@@ -67,10 +75,6 @@
             </div>
         </div>
     </div>
-
-    <p class="oh">hello</p>
-    <p class="oh">Bigi</p>
-    <button>rht</button>
 
     <script src="script.js"></script>
 </body>
