@@ -29,3 +29,5 @@ function removeItem() {
     // let remove = document.getElementById("remove")
     // remove.remove()
 }
+
+console.log(2+2)
