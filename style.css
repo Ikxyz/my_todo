@@ -15,6 +15,7 @@ body {
 .header {
   text-align: center;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .header h1 {
