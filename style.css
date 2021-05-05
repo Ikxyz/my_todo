@@ -24,7 +24,7 @@ body {
 .todo-box{
   margin-bottom: 20px;
   padding: 20px 0px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   backdrop-filter: blur(10px);
   transition: linear 2px ease-in-out;
@@ -87,7 +87,6 @@ i:hover {
   border-radius: 5px;
   transition: all 0.5s;
 }
-
 
 /* 
 @media max-width(550px) {
