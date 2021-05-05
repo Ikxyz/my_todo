@@ -8,75 +8,29 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/58d2f8cb9d.js" crossorigin="anonymous"></script>
-
-</head>
+    </head>
 <body onload="writeName()">
     
     <div class="box-container">
         <div class="todo-box">
-            <div class="header">
-                <h2 id="welcome">hello</h2>
-                <h1>Todo Application </h1>
-                <p>list of all my todos</p>
-                    <input type="text" class="text" id="userInput" value="">
-                    <button onclick="addItem()">Add <span class="fa fa-plus"></span></button>
-            </div>
+                    
 
+                    <div class="header">
+                        <h2 id="welcome">Hello</h2>
+                        <h1>Todo Application </h1>
+                        <p>list of all my todos</p>
+                        <input type="text" class="text" id="input-todo" value="">
+                        <button onclick="onClickAddTodoButton()">Add <span class="fa fa-plus"></span></button>
+                    </div>
+                        
+                    <div id="todo-item-box" id="todoItems">
 
-            <div class="todo-item-box" id="todoItems"> 
-                <div class="todo-item">
-                    <span>
-                        Listen to Country music for 30mins
-                    </span>
-                    <i class="fas fa-minus" id="remove" onclick="removeItem()"></i>
-                </div>
-
-                <div class="todo-item">
-                    <span>
-                        Push a random person off a cliff
-                    </span>
-                    <i class="fas fa-minus" id="remove" onclick="removeItem()"></i>
-                </div>
-
-                <div class="todo-item" style="color: red;">
-                        <span>
-                            Visit Library
-                        </span>
-                        <i class="fas fa-minus"></i>
-                </div>
-
-                <div class="todo-item">
-                    <span>
-                        Read a storybook for my babies
-                    </span>
-                    <i class="fas fa-minus"></i>
-                </div>
-
-                <div class="todo-item" style="color: blue;">
-                    <span>
-                        Netflix 'n' Chill
-                    </span>
-                    <i class="fas fa-minus"></i>
-                </div>
-
-                <div class="todo-item" style="color: yellow;">
-                    <span>
-                        Visit the Dark-Net
-                    </span>
-                    <i class="fas fa-minus"></i>
-                </div>
-
-                <div class="todo-item" style="color: purple;">
-                    <span>
-                        Sleep
-                    </span>
-                    <i class="fas fa-minus"></i>
-                </div>
-            </div>
+                        
+                
+                    </div>
 
         </div>
     </div>
-    
 
     <script src="script.js"></script>
 </body>
