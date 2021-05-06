@@ -2,123 +2,40 @@
 
 <head>
 
-    <title>My Title</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Todo App</title>
+
     <!-- CSS only -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-
     <div class="grid-container">
-        <div class="todo-container card shadow p-3">
+        <div class="todo-container px-2 text-center">
 
-            <h1 style="color: #e3bc9a;">Todo Application </h1>
-            <p class="text-muted">list of all my todos</p>
-            <input class="form-control" type="text" />
-            <button class="">Add</button>
-            <!-- TODO ITEM 1 -->
-            <div class="todo-item">
-                <span>
-                    Read a book
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
+            <h1 class=" mt-4 text-center text-danger">Todo Application </h1>
+            <p class="text-muted text-center">list of all my todos</p>
+
+            <input id="input-todo" class="form-control type="text" style="background-color: rgba(245, 244, 244, 0.158); border: none;"/>
+            <button onclick="onClickAddTodoButton()" class="btn btn-danger m-2">Add</button>
+            
+                <div id="list-of-todos">
+
+                <div class="col-sm-12 col-md-12 col-lg-12 pr-3">
+
+                </div>
             </div>
-
-            <!-- TODO ITEM 2 -->
-            <div class="todo-item">
-                <span>
-                    Call Mum
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 3 -->
-            <div class="todo-item">
-                <span>
-                    Other Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 4 -->
-            <div class="todo-item text-danger">
-                <del> <span>
-                        Very Important Todo
-                    </span></del>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 5 -->
-            <div class="todo-item">
-                <span>
-                    Completed Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-             <!-- TODO ITEM 6 -->
-             <div class="todo-item">
-                <span class="text-success">
-                    Take a Break
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-             <!-- TODO ITEM 7 -->
-             <div class="todo-item">
-                <span class="text-danger">
-                    Ride a Bike
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 8 -->
-            <div class="todo-item">
-                <span class="text-warning">
-                    Jump from a Cliff
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
 
         </div>
-        <!-- <div class="sectionOne">
-            Section One
-        </div>
-        <div class="sectionTwo">
-            Section Two
-        </div>
-        <div class="sectionThree">
-            Section Three
-        </div>
+   </div>
 
-        <div class="sectionFour">
-            Section Four
-        </div>
-<div class="sectionFive">
-    Section Five
-</div>
-<div class="sectionSix">
-    Section Six
-</div>
-
-<div class="sectionSeven">
-    Section Seven
-</div>
-
-<div class="sectionEight">
-    Section Eight
-</div>
-
-<div class="sectionNine">
-    Section Nine
-</div> -->
-</div>
 </body>
-
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<script src="index.js"></script>
 
 </html>
