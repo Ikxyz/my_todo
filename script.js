@@ -1,5 +1,14 @@
 console.log("Welcome to My Todo Application v 1.0.1");
 
+// window.alert("Enter your name")
+
+function writeName() {
+    let userName = prompt('Please enter your name','Poppy');
+        if (userName != null && userName != "") {
+            document.getElementById("welcome").innerHTML = "Hello "+ userName
+        }
+}
+
 // list of todos
 let listOfTodo = []; 
 
@@ -30,7 +39,7 @@ function addTodo(todo) {
   listOfTodo.push(todo);
 
   // add todo to list of todo elements in html page
-  getElement("list-of-todos").innerHTML += todoItem(todo);
+  getElement("todo-item-box").innerHTML += todoItem(todo);
 
   // store todo in local storage
   localStorage.setItem("todos", JSON.stringify(listOfTodo));
@@ -57,18 +66,14 @@ function loadFormStorage() {
 /**
  * Remove from localstorage
  */
- function RemoveFormStorage() {
-  
-  localStorage.setItem("todos", JSON.stringify(listOfTodo));
-   const todos = localStorage.getItem("todos");
-   
- // if (!todos) return;
+ function RemoveFormStorage(item) {
+  const todos = localStorage.getItem("todos");
 
-//  JSON.parse(todos).filter((todo) => { todo !== item
-//  });
-  console.log(todos)
+  if (!todos) return;
+
+  JSON.parse(todos).filter((todo) => { todo !== item
+  });
 }
-
 
 
 
@@ -114,7 +119,7 @@ function removeTodo(todo) {
   if (todoElement) {
     todoElement.remove();
   }
-  RemoveFormStorage()
+  RemoveFormStorage(todo)
 }
 
 /**

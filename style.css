@@ -52,6 +52,7 @@ body {
   background: #2471ff;
   border-radius: 35px;
   padding-bottom:40px;
+  min-height:360px;
 }
 
 .todo-item{
