@@ -1,6 +1,6 @@
-body {
-    background: rgb(34,195,82);
-    background: linear-gradient(0deg, rgba(34,195,82,1) 0%, rgba(45,253,233,1) 100%);
+body{
+    background: rgb(205,205,205);
+background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(255,191,5,1) 100%);
 }
 
 .grid-container {
@@ -14,6 +14,15 @@ body {
   .todo-container{
   grid-column: 0/1;
   grid-row:2/3;
+
+  }
+
+  div .todo-container{
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 13px;
+    margin-left: 10px;
   }
   
   .todo-item{
@@ -28,16 +37,18 @@ body {
   }
   
   .todo-item:hover{
-      color: blue;
+      color: #FFC827;
       margin-left: 10px;
       margin-right: 0px;
       box-shadow: 0px 0px 5px 0px gray;
   }
-  
+  .completed{
+    color: green;
+    text-decoration: line-through;
+  }
   button{
       width: fit-content;
   }
-  
   
   @media only screen and (max-width:550px){
   

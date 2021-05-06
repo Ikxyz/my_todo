@@ -18,82 +18,22 @@
     <div class="grid-container">
         <div class="todo-container card shadow p-3">
 
-            <h1 class="text-success">Google Keeps </h1>
-            <p class="text-muted">To-Do List</p>
-            <input class="form-control" type="text" />
-            <button class="btn btn-success mt-1 mb-3">Add</button>
-            <!-- TODO ITEM 1 -->
-            <div class="todo-item">
-                <span>
-                    Read a book
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
+            <h1 class="text-warning">Google Keeps </h1>
+            <p class="text-muted">To-Do Lists</p>
+            <!--START INPUT FIELD -->
+           <input id="input-todo" class="form-control" type="text"/>
+            <!-- END INPUT  FIELD-->
+            <button onclick="onClickAddTodoButton()" class="btn btn-warning mt-3 mb-3">Add</button>
+<div id="list-of-todos">
 
-            <!-- TODO ITEM 2 -->
-            <div class="todo-item">
-                <span>
-                    Call Mum
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 3 -->
-            <div class="todo-item">
-                <span>
-                    Other Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 4 -->
-            <div class="todo-item text-danger">
-                <del> <span>
-                        Very Important Todo
-                    </span></del>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 5 -->
-            <div class="todo-item">
-                <span>
-                    Completed Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 6 -->
-            <div class="todo-item">
-                <span class="text-success">
-                   Do My Assignments
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-            <!-- TODO ITEM 7 -->
-            <div class="todo-item">
-                <span  class="text-danger">
-                    Push my work to Github
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-            <!-- TODO ITEM 8 -->
-            <div class="todo-item">
-                <span  class="text-warning">
-                   Flex on all mah niggas
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
             </div>
 
 
         </div>
+    </div>
 
-</div>
-
-
-        </div>
-
-</div>
-</body>
+    <script src="./main.js"></script>
+    </body>
 
 
 </html>
