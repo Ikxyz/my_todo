@@ -4,7 +4,7 @@ console.log("Welcome to My Todo Application v 1.0.1");
 let listOfTodo = []; 
 
 /// List of timeout to help keep track of our todos item state
-let timeouts = {};
+let timeouts = {4};
 
 
 /**
