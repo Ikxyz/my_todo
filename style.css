@@ -114,3 +114,24 @@ button{
   grid-template-rows: 1fr 6fr 1fr;
   }
 } */
+.completed{
+  color: green;
+  text-decoration: line-through;
+}
+button{
+    width: fit-content;
+}
+
+@media only screen and (max-width:550px){
+
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+
+    .todo-container{
+        grid-column:1/2;
+        grid-row: 2/3;
+    }
+
+}

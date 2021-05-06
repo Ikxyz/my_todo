@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   <div class="grid-container">
+        <div class="todo-container card shadow p-3">
+
+            <h1 class="text-primary">Todo Application </h1>
+            <p class="text-muted">list of all my todos</p>
+            START INPUT FIELD 
+           <input id="input-todo" class="form-control" type="text" />
+             END INPUT  FIELD-
+            <button onclick="onClickAddTodoButton()" class="btn btn-primary mt-1 mb-3">Add</button>
+            <div id="list-of-todos">
+
+            </div>
+
+
+        </div>
+    </div> -->
     <!--google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap" rel="stylesheet">
@@ -18,78 +34,26 @@
             <div class="header">
                 <h1>Todo Application </h1>
                 <p>list of all my todos</p>
-                <form>
-                    <input type="text" class="text" required>
-                    <button type="submit" class="submit">Add</button>
-                </form>
+                
+                    <input type="text" id="input-todo"  class="text" required>
+                    <button onclick="onClickAddTodoButton()" class="submit">Add</button>
+                
             </div>
-
+         
             <div class="todo-item-box"> 
-                <div class="todo-item">
-                    <span>
-                        Read a book
-                    </span>
-                    <input type="checkbox">
-                </div>
+                <div id="list-of-todos">
 
-                <div class="todo-item" >
-                     <span>
-                            Visit Library
-                        </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item">
-                    <span>
-                        Read a storybook for my babies
-                    </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item">
-                    <span>
-                        Netflix 'n' Chill
-                    </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item" >
-                    <span>
-                        Visit the Dark-Net
-                   </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item">
-                    <span>
-                        Sleep
-                    </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item text-warning" >
-                    <span>
-                        Take courses
-                    </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item text-info" >
-                    <span>
-                        Do your Assignment
-                    </span>
-                    <input type="checkbox">
-                </div>
-
-                <div class="todo-item text-danger">
-                    <span><del>
-                        Listen to Recorded class
-                    </del></span>
-                    <input type="checkbox">
                 </div>
 
             </div>
         </div>
     </div>
+
+   
+    <script src="./main.js"></script>
+
+    
 </body>
+
+
 </html>
