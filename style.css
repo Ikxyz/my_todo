@@ -204,7 +204,8 @@ button{
 
 @media only screen and (max-width:550px){
   body{
-    min-height: 100vh;
+  
+    min-height:calc(100vh + 20px);
   }
 
   .grid-container{
@@ -230,22 +231,21 @@ button{
     
     margin-top:0px;
     margin-bottom:0px;
-    border-radius: 0px;
+    
     grid-column: 1/4;
-    width:100%;
-    min-height:100vh;
+    width:calc(100% - 10px);
+    min-height:calc(100vh - 10px);
+    margin:5px;
+    margin-bottom:20px;
   }
   .todo-item-box{
-    border-radius: 0px;
+    
     min-height:calc(100vh - 200px)
   }
   .text {
     width:calc(100% - 120px)
   }
-  .tab{
-    justify-content: space-between;
-    padding:0px 25px;
-  }
+  
 
 }
 
