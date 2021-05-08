@@ -1,16 +1,33 @@
-console.log("Welcome to My Todo Application v 1.0.1");
+console.log("Welcome to My Todo Application v 1.0.2");
+
+/**
+ * Todo Json Object
+ *
+ *{
+ * title: string
+ * desc: string
+ * priority: string
+ * dueAt: nnumber
+ * isCompleted: boolean
+ * timestamp: number
+ * timeoutId: number
+ *}
+ *
+ */
+
+
 
 // window.alert("Enter your name")
 
 function writeName() {
-    let userName = prompt('Please enter your name','Poppy');
-        if (userName != null && userName != "") {
-            document.getElementById("welcome").innerHTML = "Hello "+ userName
-        }
+  let userName = prompt('Please enter your name', 'Poppy');
+  if (userName != null && userName != "") {
+    document.getElementById("welcome").innerHTML = "Hello " + userName
+  }
 }
 
 // list of todos
-let listOfTodo = []; 
+let listOfTodo = [];
 
 /// List of timeout to help keep track of our todos item state
 let timeouts = {};
@@ -23,17 +40,29 @@ let timeouts = {};
  */
 const getElement = (id) => document.getElementById(id);
 
+function newTodo({title = "", desc = "", priority = "", dueAt = 0 }) {
+  return {
+     title: title,
+     desc: desc,
+     priority: priority,
+     dueAt: dueAt,
+     isCompleted: false,
+     timestamp: Date.now,
+     timeoutId: 0
+
+  }
+  
+}
+
+
 /**
  * Add todo to list of our todos array
  * @param {string} todo "call mum"
  * @returns
  */
 function addTodo(todo) {
-  // validate todo is not empty
-  if (!todo) return;
-
-  // check if todo already exists
-  if (listOfTodo.includes(todo)) return;
+  // validate todo is not empty and check if todo already exists
+  if (!todo || listOfTodo.includes(todo)) return;
 
   // add to array of todo
   listOfTodo.push(todo);
@@ -136,8 +165,8 @@ function todoItem(todo) {
 /**
  * Listen for enter key press on input todo text 
  */
-getElement("input-todo").addEventListener("keydown",(event)=>{
-  if(event.code === "Enter"){
+getElement("input-todo").addEventListener("keydown", (event) => {
+  if (event.code === "Enter") {
     onClickAddTodoButton()
   }
 })
