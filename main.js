@@ -15,7 +15,11 @@ let listOfTodo = [];
 
 let timeouts = {};
 
+let completeTodo =[];
+
 const getElement= (id)=> document.getElementById(id);
+
+newCompletetodo = JSON.parse(localStorage.getItem("deletedTodo"))
 
 function addTodo(todo){
     if(!todo)return; 
@@ -44,9 +48,16 @@ function loadFormStorage() {
 
 }
 
-function onTodoInputChange(event, todo) {    
+//add complete to list of completetodos
+function addComplete(complete){
+  completeTodo.push(complete);
+  getElement("completed-todo").innerHTML += completeItem(complete);
+}
+
+function onTodoInputChange(event, todo, complete) {    
     if (event.target.checked === true) {
         timeouts[todo] = setTimeout(() => {
+          addComplete(complete);
           removeTodo(todo);
         }, 3 * 1000 );
       }
@@ -55,8 +66,7 @@ function onTodoInputChange(event, todo) {
         clearTimeout(timeouts[todo]);
         timeouts[todo] = 0;
       }
-         getElement(todo).classList.toggle("completed");
-         
+     
          
         }
 
@@ -67,9 +77,18 @@ function onNewTodoAdded() {
    });
 }
 
+
+  
 function removeTodo(todo){
     listOfTodo = listOfTodo.filter((e)=> todo!=e);
+    
+    localStorage.setItem("todos", JSON.stringify(listOfTodo));
+    localStorage.setItem("deleteTodo", JSON.stringify(completeTodo));
+
     const todoElement = getElement(todo);
+    
+    completeItem(todo);
+
 
     if(todoElement){
         todoElement.remove();
@@ -94,6 +113,25 @@ function todoItem(todo){
     `;
 } 
 
+function completeItem(complete) {
+  return `
+  <div id="${complete}" class="dropdown-item d-flex justify-content-between" >
+  <span>${complete}</span>
+  <span class="fa fa-minus-circle nav-link" aria-hidden="true"></span>
+  </div>
+    `;
+
+}
+
+// function getComplete(complete){
+//   let node = document.createElement("span");
+//   let textnode = document.createTextNode(complete);
+//   node.appendChild(textnode);
+
+//   getElement("completed-todo").appendChild(node);
+//   console.log(complete);
+// }
+
 getElement("input-todo").addEventListener("keydown",(event)=>{
     if(event.code === "Enter"){
       onClickAddTodoButton()
@@ -101,6 +139,6 @@ getElement("input-todo").addEventListener("keydown",(event)=>{
   })
 
   
-localStorage.removeItem("todos");
+// localStorage.removeItem("todos");
 loadFormStorage();
 
