@@ -17,13 +17,28 @@
     <div class="grid-container">
         <div class="todo-container px-2 text-center">
 
-            <h1 class=" mt-4 text-center text-danger">Todo Application </h1>
+            <h1 class=" mt-4 text-center ">Todo Application </h1>
             <p class="text-muted text-center">list of all my todos</p>
 
-            <input id="input-todo" class="form-control type="text" style="background-color: rgba(245, 244, 244, 0.158); border: none;"/>
-            <button onclick="onClickAddTodoButton()" class="btn btn-danger m-2">Add</button>
+            <input id="input-todo"  class="form-control" type="text" />
+            <button onclick="onClickAddTodoButton()" class="btn btn-primary text-center mt-3 mb-3">Add</button>
             
                 <div id="list-of-todos">
+
+                <div class="col-sm-12 col-md-12 col-lg-12 pr-3">
+
+                </div>
+            </div>
+
+        </div>
+   </div>
+    <div class="grid-container history">
+        <div class="todo-container px-2 text-center">
+
+            <h4 class=" mt-4 text-center ">My History </h4>
+            <button onclick="clearHistory()" class="btn btn-primary text-center mt-3 mb-3">Clear all</button>
+            
+                <div id="list-of-history">
 
                 <div class="col-sm-12 col-md-12 col-lg-12 pr-3">
 
@@ -36,6 +51,6 @@
 </body>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<script src="index.js"></script>
+<script src="main.js"></script>
 
 </html>
