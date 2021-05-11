@@ -9,7 +9,7 @@
 // function Callout(name){
 //     console.log('hello' + ' ' + name);
 // }
-// Callout('Kemele');
+// Callout('Kemele Godstime');
 
 console.log("Todo v 1.0.0")
 
