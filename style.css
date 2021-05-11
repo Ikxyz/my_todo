@@ -1,3 +1,14 @@
+body{ 
+  height: 500vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background:url(backstyle.png) no-repeat; 
+  background-size:cover;
+}
+
+/* Grid containers*/
+
 .grid-container {
   display: grid;
   height: 100vh;
@@ -9,6 +20,11 @@
 .todo-container{
 grid-column: 2/3;
 grid-row:2/3;
+}
+
+button{
+  padding: 5px 15px;
+  width: fit-content;
 }
 
 .todo-item{
@@ -33,44 +49,7 @@ button{
     width: fit-content;
 }
 
-/* 
-.sectionOne {
-  background-color: red;
-}
 
-.sectionTwo {
-  background-color: blue;
-}
-
-.sectionThree {
-  background-color: green;
-}
-
-.sectionFour {
-  background-color: purple;
-}
-
-.sectionFive {
-  background-color: orange;
-  text-align: center;
-}
-
-.sectionSix {
-  background-color: pink;
-}
-
-.sectionSeven {
-  background-color: brown;
-}
-
-.sectionEight {
-  background-color: teal;
-}
-
-.sectionNine {
-  background-color: tomato;
-}
- */
 
 @media only screen and (max-width:550px){
 
@@ -81,7 +60,9 @@ button{
 
     .todo-container{
         grid-column:1/2;
-        grid-row: 2/3;
+  
+        grid-row:2/3;
+       
     }
 
 }
