@@ -17,7 +17,7 @@ const getElement = (id) => document.getElementById(id);
 /**
  * Add todo to list of our todos array
  * @param {string} todo "call mum"
- * @returns
+ * @returns 
  */
 function addTodo(todo) {
   // validate todo is not empty
@@ -75,7 +75,14 @@ function onTodoInputChange(event, todo) {
   }
 
   getElement(todo).classList.toggle("completed");
+
+  getElement("history-of-todos").innerHTML += todoItem(todo);
+  // console.log("history-of-todos")
 }
+function historyOfTodos{
+  
+}
+//retrieve data from localStorage after deleting
 
 /**
  * Add New Change Event Listeners On Each Todo Items
@@ -99,6 +106,7 @@ function removeTodo(todo) {
     todoElement.remove();
   }
 }
+
 
 /**
  * On Add Todo Button Click
@@ -125,7 +133,7 @@ function todoItem(todo) {
 }
 
 /**
- * Listen for enter key press on input todo text 
+ * Listen for enter key press on input todo text      
  */
 getElement("input-todo").addEventListener("keydown",(event)=>{
   if(event.code === "Enter"){
