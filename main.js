@@ -1,18 +1,42 @@
-console.log("Welcome to My Todo Application v 1.0.1");
+"use strict";
+console.log("Welcome to My Todo Application v 1.0.2");
+
+/**
+ * Todo Json Object
+ *
+ * {
+ *  title : string
+ *  desc: string
+ *  priority: string
+ *  isCompleted: boolean
+ *   dueAt: number
+ *  timestamp: number
+ *  timeoutId : number
+ * }
+ */
 
 // list of todos
-let listOfTodo = []; 
-
-/// List of timeout to help keep track of our todos item state
-let timeouts = {};
-
+let listOfTodo = [];
 
 /**
  * Get Element By Id
- * @param {string} id 
+ * @param {string} id
  * @returns HtmlDocumentObject
  */
 const getElement = (id) => document.getElementById(id);
+
+
+const _newTOdo = () => {
+  return {
+    title: "",
+    desc: "",
+    priority: "",
+    isCompleted: false,
+    dueAt: 0,
+    timestamp: 0,
+    timeoutId: 0,
+  };
+};
 
 /**
  * Add todo to list of our todos array
@@ -20,11 +44,8 @@ const getElement = (id) => document.getElementById(id);
  * @returns
  */
 function addTodo(todo) {
-  // validate todo is not empty
-  if (!todo) return;
-
-  // check if todo already exists
-  if (listOfTodo.includes(todo)) return;
+  // validate todo is not empty or check if todo already exists
+  if (!todo || listOfTodo.includes(todo)) return;
 
   // add to array of todo
   listOfTodo.push(todo);
@@ -49,24 +70,21 @@ function loadFormStorage() {
 
   if (!todos) return;
 
-  JSON.parse(todos).map((todo) => {
+  JSON.parse(todos).forEach((todo) => {
     addTodo(todo);
   });
 }
 
-
-
 /**
  * Handles Changes To Todo Item Checkbox Change
- * @param {HTMLChangeEvent} event 
- * @param {string} todo 
+ * @param {HTMLChangeEvent} event
+ * @param {string} todo
  */
 function onTodoInputChange(event, todo) {
-
   if (event.target.checked === true) {
     timeouts[todo] = setTimeout(() => {
       removeTodo(todo);
-    }, 3 * 1000 /** 3000 ~ 3 seconds */ );
+    }, 3 * 1000 /** 3000 ~ 3 seconds */);
   }
 
   if (event.target.checked === false) {
@@ -90,7 +108,7 @@ function onNewTodoAdded() {
 
 /**
  * Remove from out list of todo items
- * @param {string} todo 
+ * @param {string} todo
  */
 function removeTodo(todo) {
   listOfTodo = listOfTodo.filter((e) => todo != e);
@@ -108,11 +126,9 @@ function onClickAddTodoButton() {
   addTodo(newTodo);
 }
 
-
-
 /**
  * Takes a todo string and returns a Html todo element
- * @param {string} todo 
+ * @param {string} todo
  * @returns HTMLElement
  */
 function todoItem(todo) {
@@ -125,13 +141,13 @@ function todoItem(todo) {
 }
 
 /**
- * Listen for enter key press on input todo text 
+ * Listen for enter key press on input todo text
  */
-getElement("input-todo").addEventListener("keydown",(event)=>{
-  if(event.code === "Enter"){
-    onClickAddTodoButton()
+getElement("input-todo").addEventListener("keydown", (event) => {
+  if (event.code === "Enter") {
+    onClickAddTodoButton();
   }
-})
+});
 
 // Load Data From Storage
 loadFormStorage();
