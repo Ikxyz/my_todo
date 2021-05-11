@@ -15,108 +15,16 @@
     <div class="grid-container">
         <div class="todo-container card p-3">
 
-            <h1 class="text-center text-primary mb-3">Todo Application </h1>
+            <h1 class="text-center mb-3 mt-3">Todo Application </h1>
             <p class="text-light text-center">List of all my todos</p>
             <div class="todo-form input-group mb-3">
-                <input class="form-control todo-input" type="text" aria-describedby="add" />
-                <button class="input-group-text bg-primary text-light" id="add">Add</button>
+                <input class="form-control todo-input" id="input-todo" type="text" aria-describedby="add" />
+                <button onclick="onClickAddTodoButton()" class="input-group-text bg-primary text-light" id="add">Add</button>
             </div>
-            <!-- TODO ITEM 1 -->
-            <div class="todo-item">
-                <span>
-                    Readgit a book
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
+           
+            <div id="list-of-todos">
             </div>
-
-            <!-- TODO ITEM 2 -->
-            <div class="todo-item">
-                <span>
-                    Call Mum
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 3 -->
-            <div class="todo-item">
-                <span>
-                    Other Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 4 -->
-            <div class="todo-item text-danger">
-                <del> <span>
-                        Very Important Todo
-                    </span></del>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- TODO ITEM 5 -->
-            <div class="todo-item">
-                <span>
-                    Completed Todo
-                </span>
-                <input class="todo-checkbox" type="checkbox" />
-            </div>
-
-            <!-- ASSIGNMENT -->
-            <div class="todo-item">
-                <span class="text-warning">
-                   <del> Clone code from github repo</del>
-                </span>
-                <input class="todo-checkbox" type="checkbox" checked />
-            </div>
-
-            <div class="todo-item">
-                <span class="text-secondary">
-                    <del>
-                        Change background color
-                    </del>
-                </span>
-                <input class="todo-checkbox" type="checkbox" checked />
-            </div>
-
-            <div class="todo-item">
-                <span class="text-primary">
-                    <del>Commit and push code</del>
-                </span>
-                <input class="todo-checkbox" type="checkbox" checked />
-            </div>
-
         </div>
-        <!-- <div class="sectionOne">
-            Section One
-        </div>
-        <div class="sectionTwo">
-            Section Two
-        </div>
-        <div class="sectionThree">
-            Section Three
-        </div>
-
-        <div class="sectionFour">
-            Section Four
-        </div>
-<div class="sectionFive">
-    Section Five
-</div>
-<div class="sectionSix">
-    Section Six
-</div>
-
-<div class="sectionSeven">
-    Section Seven
-</div>
-
-<div class="sectionEight">
-    Section Eight
-</div>
-
-<div class="sectionNine">
-    Section Nine
-</div> -->
 </div>
 
 <!-- Javascript -->
