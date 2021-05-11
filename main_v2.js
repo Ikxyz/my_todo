@@ -1,4 +1,4 @@
-console.log("My Todo Application v2.0.0");
+console.log("My Todo Application v2.0.1");
 
 /**
  * About My Todo Application:-  An application that helps   * you keep track of your schedules
