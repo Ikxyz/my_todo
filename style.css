@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
 body{
     background: rgb(205,205,205);
-background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(255,191,5,1) 100%);
+    background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(255,191,5,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Poppins', sans-serif;
 }
 
 .grid-container {
@@ -12,7 +19,7 @@ background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(255,191,5,1) 100%
   }
   
   .todo-container{
-  grid-column: 0/1;
+  grid-column: 1/2;
   grid-row:2/3;
 
   }
@@ -22,7 +29,7 @@ background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(255,191,5,1) 100%
     border-width: 3px;
     border-color: white;
     border-radius: 13px;
-    margin-left: 10px;
+    margin-left: 50px;
   }
   
   .todo-item{
@@ -63,3 +70,16 @@ background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(255,191,5,1) 100%
       }
   
   }
+
+  .history-container{
+    grid-column: 3/4;
+    grid-row:2/3;
+    }
+
+div.history-container{
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 13px;
+    margin-right: 50px;
+}

@@ -2,7 +2,7 @@
 
 <head>
 
-    <title>My Title</title>
+    <title>Google Keeps - To-Do List Application</title>
     <link rel="stylesheet" href="style.css" />
     <!-- CSS only -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,15 +21,20 @@
             <h1 class="text-warning">Google Keeps </h1>
             <p class="text-muted">To-Do Lists</p>
             <!--START INPUT FIELD -->
-           <input id="input-todo" class="form-control" type="text"/>
+           <input id="input-todo" class="form-control" type="text" placeholder="E.g. Build a web app"/>
             <!-- END INPUT  FIELD-->
             <button onclick="onClickAddTodoButton()" class="btn btn-warning mt-3 mb-3">Add</button>
-<div id="list-of-todos">
+            <div id="list-of-todos">
 
             </div>
-
-
         </div>
+        <div class="history-container card shadow p-3">
+            <div id="history-of-todos">
+             <h2 class="head text-warning">My To-Do History</h2>
+             <p class="complete">Completed History</p>
+            </div>
+        </div>
+
     </div>
 
     <script src="./main.js"></script>
