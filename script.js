@@ -1,43 +1,3 @@
-/* const submitForm = document.querySelector('.add');
-const addButon = document.querySelector('.add-todo')
-const todoList = document.querySelector('.todo-item-box');
-const list = document.querySelector('.todo-item span');
-
-let listLength = list.length;
-
-const generateTemplate = (todo) => {
-
-  const html = ` <div id="todo_${listLength}" class="todo-item">
-                    <span>${todo}</span>
-                    <input id="${"input" + todo}" class="todo-checkbox" type="checkbox"/>
-                  </div>`
-
-  todoList.innerHTML += html;
-}
-
-function addTodos(e) {
-  e.preventDefault();
-  const todo = submitForm.add.value.trim();
-  if (todo.length) {
-    listLength = listLength + 1;
-    generateTemplate(todo);
-    submitForm.reset();
-  }
-}
-
-submitForm.addEventListener('keydown', addTodos);
-submitForm.addEventListener('submit', addTodos);
-submitForm.addEventListener('click', addTodos);
-
-function deleteTodos(e) {
-  if (e.target.classList.contains('delete')) {
-    e.target.parentElement.remove();
-  }
-}
-
-todoList.addEventListener('click', deleteTodos); */
-
-
 // New script
 var form = document.getElementById("addForm");
 var itemList = document.getElementById("items");
@@ -81,3 +41,44 @@ function removeItem(e) {
     }
     
 }
+
+
+
+
+// v1.0.2
+/* const submitForm = document.querySelector('.add');
+const addButon = document.querySelector('.add-todo')
+const todoList = document.querySelector('.todo-item-box');
+const list = document.querySelector('.todo-item span');
+
+let listLength = list.length;
+
+const generateTemplate = (todo) => {
+
+  const html = ` <div id="todo_${listLength}" class="todo-item">
+                    <span>${todo}</span>
+                    <input id="${"input" + todo}" class="todo-checkbox" type="checkbox"/>
+                  </div>`
+
+  todoList.innerHTML += html;
+}
+
+function addTodos(e) {
+  e.preventDefault();
+  const todo = submitForm.add.value.trim();
+  if (todo.length) {
+    listLength = listLength + 1;
+    generateTemplate(todo);
+    submitForm.reset();
+  }
+}
+
+submitForm.addEventListener('keydown', addTodos);
+submitForm.addEventListener('submit', addTodos);
+submitForm.addEventListener('click', addTodos);
+
+function deleteTodos(e) {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
+  }
+} */
