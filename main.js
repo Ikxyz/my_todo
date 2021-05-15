@@ -76,13 +76,15 @@ function onTodoInputChange(event, todo) {
 
   getElement(todo).classList.toggle("completed");
 
-  getElement("history-of-todos").innerHTML += todoItem(todo);
-  // console.log("history-of-todos")
-}
-function historyOfTodos{
-  
-}
 //retrieve data from localStorage after deleting
+var delayInMilliseconds = 2*2000; //1 second
+
+setTimeout(function() {
+  getElement("history-of-todos").innerHTML += todoItem(todo);
+}, delayInMilliseconds);
+
+}
+
 
 /**
  * Add New Change Event Listeners On Each Todo Items
