@@ -1,8 +1,9 @@
 body {
-  background: url(./image/lauren-sauder-6GPBVYLapYQ-unsplash.jpg) no-repeat top
-    center;
-    background-size: cover;
-
+  background: url(./image/lauren-sauder-6GPBVYLapYQ-unsplash.jpg) no-repeat
+    center center;
+  background-size: cover;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .grid-container {
   display: grid;
@@ -10,35 +11,46 @@ body {
   gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
+  position: relative;
 }
 
 .todo-container {
-    background: #0d1117ee;
+  background: #0d1117ee;
+
+  background-size: cover;
+
   grid-column: 2/3;
   grid-row: 2/3;
   color: #fff;
-  box-shadow: 0 0 10px #0D1117;
+  box-shadow: 0 0 10px #0d1117;
+  position: relative;
+  z-index: 1;
+}
+.no-display {
+  display: none;
+  /* transform: scale(0); */
 }
 .todo-form {
-  width: 94%;
+  width: 100%;
   margin: 20px auto 0;
 }
 .form-control:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
-.input-group-text{
-    border-color: #0d6efd;
+.input-group-text {
+  border-color: #0d6efd;
 }
 .todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 300ms 0s ease;
-  padding: 5px 20px;
+  padding: 5px 12px 5px;
   border: none;
   cursor: pointer;
   margin-right: 10px;
   margin-bottom: 10px;
+  border-left: 2px solid #0d1117af;
 }
 
 .todo-item:hover {
@@ -51,11 +63,94 @@ body {
 button {
   width: fit-content;
 }
-.completed{
-  color:#0d6efd;
+.completed {
+  color: #0d6efd;
   text-decoration: line-through;
 }
 
+.card__footer {
+  /* outline: 1px solid green; */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  background: #0d1117af;
+  text-align: right;
+  padding: 6px;
+  padding-right: 16px;
+  color: rgba(255, 255, 255, 0.735);
+  border-top: 1px solid rgba(255, 255, 255, 0.639);
+  cursor: pointer;
+  transition: all 400ms;
+}
+.card__footer:hover {
+  color: #fff;
+}
+.card__footer > span {
+  padding: 6px;
+}
+.card__footer .fa-history {
+  padding-right: 4px;
+}
+.history {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+.history .history__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.085);
+}
+.history .history__title > h1 {
+  width: 100%;
+  text-align: center;
+  padding-left: 10px;
+  font-size: 18px;
+  margin: auto 0;
+}
+.history .history__title > .fa-times {
+  font-size: 20px;
+  padding-left: 10px;
+  color: #f723235f;
+  cursor: pointer;
+  margin: auto 0;
+  transition: color 400ms;
+}
+.history .history__title > .fa-times:hover {
+  color: #f723238c;
+}
+.history #history-of-todo {
+  margin-inline: 8px;
+}
+.todo-container > button.btn {
+  position: absolute;
+  bottom: 0;
+  transition: all 400ms;
+}
+.todo-container > button.btn:hover {
+  background: #dc3546cc;
+}
+.delete-todo .fa-trash-alt {
+  color: rgba(255, 0, 0, 0.379);
+  font-size: 14px;
+}
+.todo-item .fa-trash-alt {
+  display: none;
+  transition: 350ms;
+}
+.todo-item:hover .fa-trash-alt {
+  display: block;
+}
+.delete-todo .fa-trash-alt:hover {
+  transition: color 500ms;
+  color: rgba(135, 0, 0, 0.612);
+}
 /* 
   .sectionOne {
     background-color: red;

@@ -1,7 +1,34 @@
 console.log("Welcome to my todo app v1.0.1");
 
-// list of all textDecoration
+//#region history style
+/**
+ * When a user click on the history button
+ * the history container should open
+ * and the home container should close
+ */
+const historyContainer = document.querySelector(".history");
+const homeContainer = document.querySelector(".home");
+const historyOpenBtn = document.querySelector(".card__footer span");
+const historyClosebtn = document.querySelector(
+  ".history .history__title i.fa-times"
+);
+
+historyOpenBtn.addEventListener("click", () => {
+  homeContainer.classList.toggle("no-display");
+  historyContainer.classList.toggle("no-display");
+});
+historyClosebtn.addEventListener("click", () => {
+  homeContainer.classList.toggle("no-display");
+  historyContainer.classList.toggle("no-display");
+});
+//#endregion
+
+//#region add/remove todo and storage function
+// list of all todo
 let listOfTodo = [];
+
+// todo history list
+let todoHistoryList = [];
 
 // List of timeout to help keep track of our todos item state
 let timeouts = {};
@@ -40,13 +67,49 @@ function addTodo(todo) {
   getElement("input-todo").value = "";
 }
 
+function addTodoToHistory(deletedTodo) {
+  if (!deletedTodo) return;
+
+  // empty history of deleted todo is not empty
+  if (todoHistoryList.includes(deletedTodo)) return;
+
+  // add deleted todo to history list array
+  todoHistoryList.push(deletedTodo);
+
+  // add deleted to the todo list in history
+  getElement("history-of-todo").innerHTML += addHistoryTodo(deletedTodo);
+
+  localStorage.setItem("todos-history", JSON.stringify(todoHistoryList));
+}
+
+function clearDeletedTodoHistory() {
+  todoHistoryList.forEach((todo) => {
+    if (getElement(todo)) {
+      getElement(todo).remove();
+    }
+  }); //getElement(history).remove())
+
+  localStorage.removeItem("todos-history");
+  loadFromHistoryStorage();
+}
+
+function loadFromHistoryStorage() {
+  const deleteTodos = localStorage.getItem("todos-history");
+
+  if (!deleteTodos) return;
+
+  JSON.parse(deleteTodos).map((deleteTodo) => {
+    addTodoToHistory(deleteTodo);
+  });
+}
+
 function loadFormStorage() {
   const todos = localStorage.getItem("todos");
 
   if (!todos) return;
 
   JSON.parse(todos).map((todo) => {
-    addTodo(todo.title);
+    addTodo(todo);
   });
 }
 
@@ -80,22 +143,19 @@ function onNewTodoAdded() {
     });
   });
 }
-
 /**
  * Remove from out list of todo items
  * @param {string} todo
  */
 function removeTodo(todo) {
-  console.log(listOfTodo)
+  addTodoToHistory(todo);
   listOfTodo = listOfTodo.filter((e) => todo != e);
-  console.log(listOfTodo)
   const todoElement = getElement(todo);
 
   if (todoElement) {
     todoElement.remove();
   }
   localStorage.setItem("todos", JSON.stringify(listOfTodo));
-  const todos = localStorage.getItem("todos");
 }
 
 /**
@@ -122,6 +182,22 @@ function todoItem(todo) {
 }
 
 /**
+ * Takes a todo string and returns a Html todo element
+ * @param {string} todo
+ * @returns HTMLElement
+ */
+function addHistoryTodo(deletedTodo) {
+  return `
+  <div id="${deletedTodo}" class="todo-item">
+  <span>${deletedTodo}</span>
+  <span id="${
+    "input" + deletedTodo
+  }" class="delete-todo" ><i class="fas fa-trash-alt""></i></span>
+  </div>
+  `;
+}
+
+/**
  * Listen for enter key press on input todo text
  */
 getElement("input-todo").addEventListener("keydown", (ev) => {
@@ -132,3 +208,5 @@ getElement("input-todo").addEventListener("keydown", (ev) => {
 
 // Load Data from storage
 loadFormStorage();
+loadFromHistoryStorage();
+//#endregion
