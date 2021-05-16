@@ -46,7 +46,7 @@ function loadFormStorage() {
   if (!todos) return;
 
   JSON.parse(todos).map((todo) => {
-    addTodo(todo);
+    addTodo(todo.title);
   });
 }
 
